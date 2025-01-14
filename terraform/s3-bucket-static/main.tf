@@ -19,7 +19,7 @@ resource "aws_s3_bucket" "static_site_bucket" {
   }
 }
 
-resource "aws_s3_account_public_access_block" "static_site_bucket" {
+resource "aws_s3_public_access_block" "static_site_bucket" {
     bucket = aws_s3_bucket.static_site_bucket.id
     block_public_acls = false
     block_public_policy = false
